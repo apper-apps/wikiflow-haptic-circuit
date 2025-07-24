@@ -1,0 +1,30 @@
+[
+  {
+    "Id": 1,
+    "name": "John Doe",
+    "email": "john@company.com",
+    "role": "admin",
+    "avatar": null
+  },
+  {
+    "Id": 2,
+    "name": "Jane Smith",
+    "email": "jane@company.com",
+    "role": "editor",
+    "avatar": null
+  },
+  {
+    "Id": 3,
+    "name": "Mike Johnson",
+    "email": "mike@company.com",
+    "role": "viewer",
+    "avatar": null
+  },
+  {
+    "Id": 4,
+    "name": "Sarah Wilson",
+    "email": "sarah@company.com",
+    "role": "editor",
+    "avatar": null
+  }
+]

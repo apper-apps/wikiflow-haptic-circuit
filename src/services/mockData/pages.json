@@ -1,0 +1,183 @@
+[
+  {
+    "Id": 1,
+    "title": "Company Handbook",
+    "content": [
+      {
+        "id": "1",
+        "type": "heading",
+        "content": { "text": "Welcome to Our Company", "level": 1 },
+        "order": 0
+      },
+      {
+        "id": "2",
+        "type": "text",
+        "content": { "text": "This handbook contains all the essential information you need to know about working at our company. Please read through it carefully and refer back to it whenever you have questions." },
+        "order": 1
+      },
+      {
+        "id": "3",
+        "type": "list",
+        "content": { 
+          "items": ["Company values and culture", "Benefits and compensation", "Policies and procedures", "Career development opportunities"],
+          "ordered": false
+        },
+        "order": 2
+      }
+    ],
+    "parentId": null,
+    "status": "published",
+    "author": "HR Team",
+    "createdAt": "2024-01-15T09:00:00Z",
+    "updatedAt": "2024-01-20T14:30:00Z",
+    "tags": ["handbook", "hr", "onboarding"],
+    "category": "HR"
+  },
+  {
+    "Id": 2,
+    "title": "Benefits Overview",
+    "content": [
+      {
+        "id": "4",
+        "type": "heading",
+        "content": { "text": "Employee Benefits", "level": 1 },
+        "order": 0
+      },
+      {
+        "id": "5",
+        "type": "text",
+        "content": { "text": "We offer a comprehensive benefits package to support your health, financial well-being, and work-life balance." },
+        "order": 1
+      }
+    ],
+    "parentId": 1,
+    "status": "published",
+    "author": "HR Team",
+    "createdAt": "2024-01-16T10:00:00Z",
+    "updatedAt": "2024-01-18T16:00:00Z",
+    "tags": ["benefits", "health", "compensation"],
+    "category": "HR"
+  },
+  {
+    "Id": 3,
+    "title": "Development Guidelines",
+    "content": [
+      {
+        "id": "6",
+        "type": "heading",
+        "content": { "text": "Coding Standards", "level": 1 },
+        "order": 0
+      },
+      {
+        "id": "7",
+        "type": "text",
+        "content": { "text": "This document outlines our coding standards and best practices for all development projects." },
+        "order": 1
+      },
+      {
+        "id": "8",
+        "type": "code",
+        "content": { 
+          "code": "// Example: Function naming convention\nconst getUserData = async (userId) => {\n  try {\n    const response = await api.get(`/users/${userId}`);\n    return response.data;\n  } catch (error) {\n    console.error('Error fetching user data:', error);\n    throw error;\n  }\n};",
+          "language": "javascript"
+        },
+        "order": 2
+      }
+    ],
+    "parentId": null,
+    "status": "published",
+    "author": "Engineering Team",
+    "createdAt": "2024-01-10T08:00:00Z",
+    "updatedAt": "2024-01-22T11:45:00Z",
+    "tags": ["development", "coding", "standards"],
+    "category": "Engineering"
+  },
+  {
+    "Id": 4,
+    "title": "API Documentation",
+    "content": [
+      {
+        "id": "9",
+        "type": "heading",
+        "content": { "text": "REST API Reference", "level": 1 },
+        "order": 0
+      },
+      {
+        "id": "10",
+        "type": "text",
+        "content": { "text": "Complete reference for our REST API endpoints, including authentication, request/response formats, and error handling." },
+        "order": 1
+      }
+    ],
+    "parentId": 3,
+    "status": "draft",
+    "author": "John Doe",
+    "createdAt": "2024-01-18T14:00:00Z",
+    "updatedAt": "2024-01-23T09:15:00Z",
+    "tags": ["api", "documentation", "backend"],
+    "category": "Engineering"
+  },
+  {
+    "Id": 5,
+    "title": "Marketing SOPs",
+    "content": [
+      {
+        "id": "11",
+        "type": "heading",
+        "content": { "text": "Standard Operating Procedures", "level": 1 },
+        "order": 0
+      },
+      {
+        "id": "12",
+        "type": "text",
+        "content": { "text": "Step-by-step procedures for common marketing tasks and campaigns." },
+        "order": 1
+      },
+      {
+        "id": "13",
+        "type": "table",
+        "content": {
+          "headers": ["Task", "Owner", "Timeline", "Tools"],
+          "rows": [
+            ["Content Creation", "Content Team", "2 weeks", "Figma, Canva"],
+            ["Campaign Launch", "Marketing Manager", "1 week", "HubSpot, Analytics"],
+            ["Performance Review", "Analytics Team", "Weekly", "Google Analytics, Dashboards"]
+          ]
+        },
+        "order": 2
+      }
+    ],
+    "parentId": null,
+    "status": "published",
+    "author": "Marketing Team",
+    "createdAt": "2024-01-12T13:00:00Z",
+    "updatedAt": "2024-01-21T10:30:00Z",
+    "tags": ["marketing", "sop", "procedures"],
+    "category": "Marketing"
+  },
+  {
+    "Id": 6,
+    "title": "Security Policies",
+    "content": [
+      {
+        "id": "14",
+        "type": "heading",
+        "content": { "text": "Information Security", "level": 1 },
+        "order": 0
+      },
+      {
+        "id": "15",
+        "type": "text",
+        "content": { "text": "Our comprehensive security policies ensure the protection of company data and systems." },
+        "order": 1
+      }
+    ],
+    "parentId": null,
+    "status": "published",
+    "author": "IT Security",
+    "createdAt": "2024-01-08T11:00:00Z",
+    "updatedAt": "2024-01-19T15:20:00Z",
+    "tags": ["security", "policies", "it"],
+    "category": "IT"
+  }
+]
