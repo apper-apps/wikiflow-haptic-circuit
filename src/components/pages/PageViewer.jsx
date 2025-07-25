@@ -95,10 +95,10 @@ const PageViewer = () => {
             </div>
           </div>
           
-          <div className="flex items-center space-x-3">
+<div className="flex items-center space-x-3">
             <Button
               variant="secondary"
-              onClick={() => navigate(`/page/${id}/edit`)}
+              onClick={() => navigate(`/admin/pages/${id}/edit`)}
               className="flex items-center space-x-2"
             >
               <ApperIcon name="Edit" className="w-4 h-4" />

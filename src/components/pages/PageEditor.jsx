@@ -59,9 +59,9 @@ const PageEditor = () => {
       setSaving(true);
       let savedPage;
       
-      if (isNewPage) {
+if (isNewPage) {
         savedPage = await pagesService.create(pageData);
-        navigate(`/page/${savedPage.Id}/edit`, { replace: true });
+        navigate(`/admin/pages/${savedPage.Id}/edit`, { replace: true });
       } else {
         savedPage = await pagesService.update(id, pageData);
       }
@@ -91,15 +91,14 @@ const PageEditor = () => {
     try {
       setSaving(true);
       
-      if (isNewPage) {
+if (isNewPage) {
         const savedPage = await savePage({ ...page, status: "published" });
-        navigate(`/page/${savedPage.Id}`, { replace: true });
+        navigate(`/admin/pages/${savedPage.Id}`, { replace: true });
       } else {
         const publishedPage = await pagesService.publish(id);
         setPage(publishedPage);
-        navigate(`/page/${id}`);
+        navigate(`/admin/pages/${id}`);
       }
-      
       toast.success("Page published successfully!");
     } catch (err) {
       toast.error(err.message || "Failed to publish page");
@@ -113,9 +112,9 @@ const PageEditor = () => {
     }
     
     try {
-      await pagesService.delete(id);
+await pagesService.delete(id);
       toast.success("Page deleted successfully!");
-      navigate("/");
+      navigate("/admin/pages");
     } catch (err) {
       toast.error(err.message || "Failed to delete page");
     }

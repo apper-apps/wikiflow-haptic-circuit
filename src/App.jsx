@@ -17,16 +17,24 @@ function AppContent() {
   if (isAdmin) {
     return (
       <AdminLayout>
+<Routes>
+          {/* Admin CMS Routes */}
+          <Route path="/admin" element={<AdminLayout><Dashboard /></AdminLayout>} />
+          <Route path="/admin/dashboard" element={<AdminLayout><Dashboard /></AdminLayout>} />
+          <Route path="/admin/pages" element={<AdminLayout><Dashboard /></AdminLayout>} />
+          <Route path="/admin/pages/new" element={<AdminLayout><PageEditor /></AdminLayout>} />
+          <Route path="/admin/pages/:id" element={<AdminLayout><PageViewer /></AdminLayout>} />
+          <Route path="/admin/pages/:id/edit" element={<AdminLayout><PageEditor /></AdminLayout>} />
+          <Route path="/admin/search" element={<AdminLayout><SearchPage /></AdminLayout>} />
+          <Route path="/admin/categories" element={<AdminLayout><CategoriesPage /></AdminLayout>} />
+          <Route path="/admin/settings" element={<AdminLayout><SettingsPage /></AdminLayout>} />
+        </Routes>
+      ) : (
+        /* Public Wiki Routes */
         <Routes>
-          <Route path="/admin" element={<Dashboard />} />
-          <Route path="/admin/dashboard" element={<Dashboard />} />
-          <Route path="/admin/pages" element={<Dashboard />} />
-          <Route path="/admin/pages/new" element={<PageEditor />} />
-          <Route path="/admin/pages/:id" element={<PageViewer />} />
-          <Route path="/admin/pages/:id/edit" element={<PageEditor />} />
-          <Route path="/admin/search" element={<SearchPage />} />
-          <Route path="/admin/categories" element={<CategoriesPage />} />
-          <Route path="/admin/settings" element={<SettingsPage />} />
+          <Route path="/" element={<PageViewer />} />
+          <Route path="/page/:slug" element={<PageViewer />} />
+          <Route path="/search" element={<SearchPage />} />
         </Routes>
       </AdminLayout>
     );
